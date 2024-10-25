@@ -98,7 +98,7 @@ jobs:
 
     - uses: azure/webapps-deploy@v2
       with:
-        app-name: '{your_prefix}-test'
+        app-name: 'xko7mdfk6hqvq-test'
         images: xko7mdfk6hqvqmpnpreg.azurecr.io/techexcel/dotnetcoreapp:${{github.run_number}}
 
   deploy-to-prod:
@@ -119,5 +119,5 @@ jobs:
 
     - uses: azure/webapps-deploy@v2
       with:
-        app-name: '{your_prefix}-prod'
+        app-name: 'xko7mdfk6hqvq-prod'
         images: xko7mdfk6hqvqmpnpreg.azurecr.io/techexcel/dotnetcoreapp:${{github.run_number}}
