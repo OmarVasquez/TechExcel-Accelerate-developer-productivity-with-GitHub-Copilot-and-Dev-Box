@@ -13,6 +13,7 @@ var registryName = '${uniqueString(resourceGroup().id)}mpnpreg'
 var registrySku = 'Standard'
 var imageName = 'techexcel/dotnetcoreapp'
 var startupCommand = ''
+var redisCacheName = '${uniqueString(resourceGroup().id)}-mpnp-redis'
 
 
 resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2021-12-01-preview' = {
@@ -101,7 +102,7 @@ resource appServiceApp 'Microsoft.Web/sites@2020-12-01' = {
 }
 
 resource redisCache 'Microsoft.Cache/Redis@2020-06-01' = {
-  name: 'myRedisCache'
+  name: 'redisCacheName'
   location: location
   properties: {
     sku: {
