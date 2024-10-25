@@ -102,7 +102,7 @@ resource appServiceApp 'Microsoft.Web/sites@2020-12-01' = {
 }
 
 resource redisCache 'Microsoft.Cache/Redis@2020-06-01' = {
-  name: 'redisCacheName'
+  name: redisCacheName
   location: location
   properties: {
     sku: {
